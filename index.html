@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رامیرا — خانه</title>
+  <link rel="stylesheet" href="style.css">
 
+  <style>
+    /* 🎬 ویدیو تمام‌صفحه زیر کل سایت */
+    .bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      filter: brightness(0.45);
+      opacity: 0;
+      animation: fadeVideo 2.5s ease forwards;
+    }
+
+    @keyframes fadeVideo {
+      from { opacity: 0; transform: scale(1.05); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* ✨ افکت متن روی ویدیو */
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeText 2s ease 1s forwards;
+    }
+
+    @keyframes fadeText {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* حذف بک‌گراند و حاشیه‌های اضافه */
+    body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    header.site-header {
+      background: transparent;
+      border: none;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.4);
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- 🎥 ویدیو پس‌زمینه کل صفحه -->
+  <video class="bg-video" autoplay muted loop playsinline>
+    <source src="video.mp4" type="video/mp4">
+    مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+  </video>
+
+  <!-- 🔹 هدر -->
+  <header class="site-header">
+    <img src="https://raw.githubusercontent.com/orgmohammad/ramira/3173bad7a45378534ce74cd5603111356bd5ee39/ChatGPT%20Image%20Sep%2021%2C%202025%2C%2006_16_32%20AM.png" alt="لوگو راميرا" class="logo">
+    <nav>
+      <a href="index.html" class="active">خانه</a>
+      <a href="products.html">محصولات</a>
+    </nav>
+  </header>
+
+  <!-- ✨ متن روی ویدیو -->
+  <section class="hero-content">
+    <h1>رامیرا</h1>
+    <p>برندی با اصالت، طراحی مدرن و دوخت خاص برای بانوان شیک‌پوش ایرانی.</p>
+    <a href="products.html" class="btn-primary">مشاهده محصولات</a>
+  </section>
+
+  <!-- 💬 دکمه‌های واتساپ و اینستاگرام -->
+  <a href="https://wa.me/989120653481" class="social-btn whatsapp" target="_blank" title="گفت‌وگو در واتساپ">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="واتساپ">
+  </a>
+
+  <a href="https://www.instagram.com/ramira.mode" class="social-btn instagram" target="_blank" title="صفحه اینستاگرام رامیرا">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="اینستاگرام">
+  </a>
+
+  <!-- 🩶 فوتر -->
+  <footer>
+    <p>© ۲۰۲۵ رامیرا — طراحی شده توسط orgmohmd 💖</p>
+  </footer>
+
+</body>
+</html>
